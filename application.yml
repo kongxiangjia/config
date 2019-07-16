@@ -1,14 +1,16 @@
 server:
-  port: 9998
+  port: 9999
 
 #mysql配置
 
 spring:
+  application:
+    name: support-uaa
   profiles:
     active: prod
   datasource:
     # url: jdbc:mysql://192.168.1.203:3306/spsv2_formal_09_20?characterEncoding=utf8&useSSL=true&allowMultiQueries=true
-    url: jdbc:mysql://192.168.1.62:3306/spsv2_migration_2017092701?characterEncoding=utf8&useSSL=true&allowMultiQueries=true
+    url: jdbc:mysql://192.168.1.62:3306/spsv2_formal_09_20?characterEncoding=utf8&useSSL=true&allowMultiQueries=true
     username: root
     password: 123456
 #    password: admin
@@ -17,13 +19,14 @@ spring:
 #日期格式：标准格式
   jackson:
     serialization:
-      write-dates-as-timestamps : false
+      write-dates-as-timestamps: false
     time-zone: Asia/Shanghai
     property-naming-strategy: SNAKE_CASE
 #rabbitmqp配置
   rabbitmq:
     port: 5672
-    host: 192.168.1.203
+    #host: 192.168.1.62
+    host: 47.104.166.37
 #    host: localhost
     username: admin
     password: admin64661899
@@ -55,10 +58,21 @@ mybatis:
   type-aliases-package: com.shipparts.uaa.entity
 
 
+#注册服务
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:5000/eureka/
+  instance:
+    #地址配置
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
+
 shipparts:
 #系统管理员
  administrator:
-  username: admin
+  username: adminxxx
   password: 123456
 #认证服务器做登录认证的参数
  globalSecurity:
