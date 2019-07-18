@@ -71,7 +71,7 @@ eureka:
 shipparts:
 #系统管理员
  administrator:
-  username: adminxxx1xxccc
+  username: adminxxx1xxc
   password: 123456
 #认证服务器做登录认证的参数
  globalSecurity:
