@@ -9,12 +9,12 @@ spring:
   profiles:
     active: local
 
-#日期格式：标准格式
-  jackson:
-    serialization:
-      write-dates-as-timestamps: false
-    time-zone: Asia/Shanghai
-    property-naming-strategy: SNAKE_CASE
+##日期格式：标准格式
+#  jackson:
+#    serialization:
+#      write-dates-as-timestamps: false
+#    time-zone: Asia/Shanghai
+#    property-naming-strategy: SNAKE_CASE
 #rabbitmqp配置
   rabbitmq:
     port: 5672
