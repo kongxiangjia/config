@@ -8,7 +8,7 @@ spring:
     name: support-uaa
   profiles:
     active: local
- 
+
 #日期格式：标准格式
   jackson:
     serialization:
