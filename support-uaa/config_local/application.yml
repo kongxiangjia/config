@@ -32,15 +32,15 @@ management:
 
 
 #注册服务
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:8000/eureka/
-  instance:
-    #地址配置
-    hostname: localhost
-    prefer-ip-address: true
-    instance-id: ${eureka.instance.hostname}:${server.port}
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:8000/eureka/
+#  instance:
+#    #地址配置
+#    hostname: localhost
+#    prefer-ip-address: true
+#    instance-id: ${eureka.instance.hostname}:${server.port}
 
 shipparts:
 #系统管理员
